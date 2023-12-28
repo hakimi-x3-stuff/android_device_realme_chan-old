@@ -5,9 +5,9 @@
 #
 
 # Include the common OEM chipset BoardConfig.
-include device/oneplus/sm8150-common/BoardConfigCommon.mk
+include device/realme/sm8150-common/BoardConfigCommon.mk
 
-DEVICE_PATH := device/oneplus/hotdogb
+DEVICE_PATH := device/realme/chan
 
 # A/B
 AB_OTA_PARTITIONS += \
@@ -18,16 +18,16 @@ AB_OTA_PARTITIONS += \
     vbmeta_system
 
 # Display
-TARGET_SCREEN_DENSITY := 420
+TARGET_SCREEN_DENSITY := 480
 
 # Partitions
 -include vendor/lineage/config/BoardConfigReservedSize.mk
 BOARD_BOOTIMAGE_PARTITION_SIZE := 100663296
 BOARD_DTBOIMG_PARTITION_SIZE := 25165824
-BOARD_RECOVERYIMAGE_PARTITION_SIZE := 100663296
-BOARD_USERDATAIMAGE_PARTITION_SIZE := 115601780736
-BOARD_SUPER_PARTITION_SIZE := 15032385536
-BOARD_SUPER_PARTITION_GROUPS := oneplus_dynamic_partitions
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 83886080
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 243499216896
+BOARD_SUPER_PARTITION_SIZE := 8707375104
+BOARD_SUPER_PARTITION_GROUPS := qti_dynamic_partitions
 BOARD_ONEPLUS_DYNAMIC_PARTITIONS_PARTITION_LIST := odm product system system_ext vendor
 BOARD_ONEPLUS_DYNAMIC_PARTITIONS_SIZE := 7511998464
 BOARD_ODMIMAGE_FILE_SYSTEM_TYPE := ext4
@@ -55,4 +55,4 @@ BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX := $(PLATFORM_SECURITY_PATCH_TIMESTAMP)
 BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX_LOCATION := 1
 
 # Include the proprietary files BoardConfig.
-include vendor/oneplus/hotdogb/BoardConfigVendor.mk
+include vendor/realme/chan/BoardConfigVendor.mk
